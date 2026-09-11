@@ -17,10 +17,15 @@
  button {
     background: green;
     color: white;
-    border: none;
+    border: 1px solid green;
     padding: 10px 20px;
     font-weight: bold;
     border-radius: 4px;
+ }
+
+ #delete-btn {
+  background: white;
+  color: green;
  }
 
  ul {
