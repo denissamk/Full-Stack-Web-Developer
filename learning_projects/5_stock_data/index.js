@@ -34,5 +34,5 @@ function renderStockTicker(stockData) {
         "flat"
     stockDisplayTime.innerText = time
 
-    numPrice = prevPrice
+    prevPrice = numPrice
 }
