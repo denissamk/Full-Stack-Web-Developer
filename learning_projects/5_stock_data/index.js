@@ -1,5 +1,38 @@
 import {getStockData} from "./fakeStockAPI.js"
 
-console.log(getStockData)
+setInterval(function(){
+    const stockData = getStockData()
+    renderStockTicker(stockData)
+    },
+    1500
+)
 
-function renderStockTicker(stockDa) {}
+let prevPrice = null
+
+function renderStockTicker(stockData) {
+    const stockDisplayName = document.getElementById("name")
+    const stockDisplaySymbol = document.getElementById("symbol")
+    const stockDisplayPriceValue = document.getElementById("price-value")
+    const stockDisplayPriceIcon = document.getElementById("price-icon")
+    const stockDisplayTime = document.getElementById("time")
+
+    const {name, sym, price, time} = stockData
+    const numPrice = Number(price)
+
+    const priceDirectionIcon =
+        numPrice < prevPrice ? "▼" :
+        numPrice > prevPrice ? "▲" :
+        "▶"
+
+    stockDisplayName.innerText = name
+    stockDisplaySymbol.innerText = sym
+    stockDisplayPriceValue.innerText = price
+    stockDisplayPriceIcon.textContent = priceDirectionIcon
+    stockDisplayPriceIcon.className =
+        priceDirectionIcon === "▲" ? "up" :
+        priceDirectionIcon === "▼" ? "down" :
+        "flat"
+    stockDisplayTime.innerText = time
+
+    numPrice = prevPrice
+}
