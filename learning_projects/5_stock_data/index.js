@@ -37,6 +37,13 @@ function renderStockTicker(stockData) {
     prevPrice = numPrice
 }
 
-const names = ["denis", "devon", "levan"]
 
+
+
+const names = ["denis", "devon", "levan"]
 names.forEach(names => console.log(names))
+
+
+
+const response = fetch("https://example.com");
+console.log(response);
