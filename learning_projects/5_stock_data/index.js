@@ -45,5 +45,8 @@ names.forEach(names => console.log(names))
 
 
 
-const response = fetch("https://example.com");
-console.log(response);
+async function hello() {
+    return "hello"
+}
+const hi = hello()
+console.log(hi)
