@@ -36,17 +36,3 @@ function renderStockTicker(stockData) {
 
     prevPrice = numPrice
 }
-
-
-
-
-const names = ["denis", "devon", "levan"]
-names.forEach(names => console.log(names))
-
-
-
-async function hello() {
-    return "hello"
-}
-const hi = hello()
-console.log(hi)
