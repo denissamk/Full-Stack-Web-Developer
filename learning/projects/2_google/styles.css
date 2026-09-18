@@ -14,32 +14,16 @@
     line-height: 24px;
     margin: 0 auto;
     padding: 10px 30px;
-    border: 1px solid #dfe1e5;
+    border: 3px solid #dfe1e5;
     border-radius: 24px;
 }
 
 .btn {
-    display: block;
     margin: 30px auto 0 auto;
+    background: #dfe1e5;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
 }
-/* FLAGS CHALLENGE
-
-body {
-    margin: 0;
-}
-
-.red {
-    background: red;
-    height: 100px;
-}
-
-.blue {
-    background: blue;
-    height: 100px;
-    margin: 15px 0;
-}
-
-.green {
-    background: green;
-    height: 100px;
-} */
