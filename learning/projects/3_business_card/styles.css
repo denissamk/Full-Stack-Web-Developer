@@ -13,7 +13,8 @@ body {
 }
 
 .card {
-    background: #89aae6;
+    text-shadow: 2px 2px 2px white;
+    background: #90e0ef;
     color: #2b2839;
     text-align: center;
     width: 375px;
@@ -21,8 +22,27 @@ body {
     margin: auto;
     padding: 20px;
     justify-content: space-around;
-    border-bottom: 5px solid #d8cefe;
+    border: 3px solid;
+    border-color: red;
     border-radius: 10px;
+    transition-duration: 0.4s;
+    animation-name: borderColor;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(27, 15, 97, 0.399)
+}
+
+@keyframes borderColor {
+    0%     {border-color: red}
+    16.67% {border-color: orange}
+    33.33% {border-color: yellow}
+    50%    {border-color: green}
+    66.67% {border-color: blue}
+    83.33% {border-color: indigo}
+    100%   {border-color: violet}
 }
 
 .border {
