@@ -1,86 +1,25 @@
 body {
     text-align: center;
-    font-family: 'Happy Monkey', cursive;
-    /* background: #a2d2ff; */
-    background: linear-gradient(#a2d2ff, #ffafcc);
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 400    ;
+    font-style: normal;;
+    background: #a2d2ff;
     color: aliceblue;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    text-shadow: 0px 0px 1px black;
-}
-
-#profile-img {
-    width: 200px;
-    border-radius: 50%;
-    border: 6px solid pink;
-}
-
-#age  {
-    background: pink;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-#date {
-    margin: 0;
-    background: pink;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-#header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.gift-section {
-    margin-top: 50px;
+h1, h2, h3, h4, h5, h6, p {
+    text-shadow: 0px 0px 2px black;
 }
 
-.gift-title {
-    margin-bottom: 10px;
+#profile-img {
+    width: 200px;
+    border-radius: 50%;
+    border: 6px solid khaki;                                                                                           
 }
 
-.gift-description {
-    margin-top: 10px;
-}
-
-.gift-img {
-    margin: 0 auto;
-    width: 400px;
-    height: 400px;
-    background-image: url('images/gift.png');
-    background-size: cover;
-    border: 6px solid white;
-    border-radius: 10px;
-}
-
-#gift-love:hover {
-    background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXozeDkyOThtaWdseHVzOW12Ym90aWE2MGJxNjJzN3FzMjU1OXlheCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/R6gvnAxj2ISzJdbA63/giphy.gif');
-}
-
-#gift-67:hover {
-    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnIxNzZicnRjY3RqbmhmZndyejZzcXQ4a294Y2RqcXpiY2oyeWM1biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1ojn1S7BTXUry8elNi/giphy.gif');
-}
-
-#gift-thanks {
-    height: 200px;
-}
-
-#gift-thanks:hover {
-    background-image: url('https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3d201ZDlyNnQ3aW5tNGpvYmJsMXFiaWM2dzJ5aDA3dGVpb2dkZTZqcyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/6J5XFXrC6ZotTWNSjM/giphy.gif');
-}
-
-#footer {
-    font-style: italic;
-    width: 400px;
-    font-size: larger;
-    margin: 50px auto 30px;
-}
-
-a {
-    color: white;
-}
+h2, h4 {
+    background: khaki
+}   
