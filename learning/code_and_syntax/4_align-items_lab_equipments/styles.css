@@ -1,0 +1,18 @@
+.container {
+    border: 8px solid darkgreen;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.item {
+    width: fit-content;
+    height: fit-content;
+    margin: 2px;
+    padding: 10px;
+    font-size: 40px;
+    border: 2px solid black;
+    background: linear-gradient(darkgreen, green);
+}
