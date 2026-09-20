@@ -1,6 +1,6 @@
-.border {
+/* .border {
     border: 3px solid red;
-}
+} */
 
 body {
     margin: 0;
@@ -43,6 +43,7 @@ body {
 
 
 #members {
+    background: linear-gradient(lightblue, aliceblue);
     color: aliceblue;
     display: flex;
     flex-direction: column;
@@ -54,14 +55,25 @@ body {
 }
 
 #members h6 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.iglogo-img {
+    width: 30px;
+    height: 30px;
 }
 
 .member {
-    background: midnightblue;
+    background: linear-gradient(royalblue, midnightblue);
     padding: 20px;
     border-radius: 20px;
     width: 15%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+.member:hover {
+  transform: translateY(-6px);
 }
 
 #members-first-row, #members-second-row {
@@ -73,13 +85,11 @@ body {
 }
 
 .member-img {
-    border: 3px solid aliceblue;
+    border: 3px solid whitesmoke;
     border-radius: 50%;
     width: 120px;
     height: 120px;
 }
-
-
 
 
 
