@@ -3,15 +3,18 @@ body {
     font-family: "Happy Monkey", system-ui;
     font-weight: 400    ;
     font-style: normal;;
-    background: #a2d2ff;
+    background: linear-gradient(lightskyblue, coral);
     color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     text-shadow: 0px 0px 2px black;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #profile-img {
@@ -20,6 +23,68 @@ h1, h2, h3, h4, h5, h6, p {
     border: 6px solid khaki;                                                                                           
 }
 
-h2, h4 {
-    background: khaki
-}   
+#age {
+    margin: 20px 0 15px 0;
+    background: khaki;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#date {
+    margin: 0;
+    background: khaki;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.gift-section {
+    margin: 50px 0 0 0;
+}
+
+.gift-title {
+    margin: 0 0 15px 0;
+}
+
+.gift-hint {
+    margin: 0 0 20px 0;
+}
+
+.gift-img {
+    background-image: url("./images/gift.png"), linear-gradient(lightgoldenrodyellow, goldenrod);
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    border: 6px solid tomato;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#gift-img-happy:hover {
+    background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWtyZXEyMXRmNHVzMGd0Y2E3dmM4Ymk1eGFqNml6cm1xNzR5MTNubiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/inyqrgp9o3NUA/giphy.gif");
+    background-position: center;
+}
+
+#gift-img-beautiful:hover {
+    background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXRtbHdpajJ1b2g4dG5mbW1iMjBzcHBiZ2hpMjhreHAweWxuMjZxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pPp1QmKxba9O/giphy.gif");
+    background-position: 70%;
+}
+
+#gift-img-WYATB{
+    height: 300px;
+}
+
+#gift-img-WYATB:hover {
+    background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmdpb2UwM3dpOGVndnUxd21tNDZwMTZrd3Z0OTNlcTBleW1qbWxiMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gHTbJ2M7yPdAmLdZJ0/giphy.gif");
+    background-position: 60%;
+}
+
+#footer {
+    font-style: italic;
+    font-size: 25px;
+    width: 400px;
+    margin: 40px auto 30px;
+}
+
+a {
+    color: inherit;
+}

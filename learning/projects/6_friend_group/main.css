@@ -1,0 +1,92 @@
+.border {
+    border: 3px solid red;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    color: aliceblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#hero {
+    background-image: url("./images/together.jpg");
+    width: 100%;
+    aspect-ratio: 1.8;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; */
+}
+
+#hero h1, h3 {
+    background: midnightblue;
+    padding: 6px 18px;
+    border-radius: 10px;
+}
+
+#hero h1 {
+    font-size: 2rem;
+    margin: 300px 0 20px 0;
+}
+
+#hero h3 {
+    font-size: 1.2rem;
+}
+
+
+
+#members {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+#members h5 {
+    color: midnightblue;
+    font-size: 2rem;
+}
+
+#members h6 {
+    font-size: 1rem;
+}
+
+.member {
+    background: midnightblue;
+    padding: 20px;
+    border-radius: 20px;
+    width: 15%;
+}
+
+#members-first-row, #members-second-row {
+    margin: 0 0 50px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.member-img {
+    border: 3px solid aliceblue;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+}
