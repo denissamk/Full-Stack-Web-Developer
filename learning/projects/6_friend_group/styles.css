@@ -1,6 +1,6 @@
-/* .border {
+.border {
     border: 3px solid red;
-} */
+}
 
 body {
     margin: 0;
@@ -11,39 +11,35 @@ body {
 
 #hero {
     background-image: url("./images/together.jpg");
-    width: 100%;
+    max-width: 100%;
     aspect-ratio: 1.8;
+    min-height: 60vh;
+    height: auto;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: 0 auto;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative; */
 }
 
-#hero h1, h3 {
+/* #hero h1, p {
     background: midnightblue;
-    padding: 6px 18px;
-    border-radius: 10px;
-}
+    
+} */
 
 #hero h1 {
-    font-size: 2rem;
-    margin: 300px 0 20px 0;
-}
-
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}   
+/*
 #hero h3 {
-    font-size: 1.2rem;
-}
+    
+} */
 
 
 
-#members {
-    background: linear-gradient(lightblue, aliceblue);
+/* #members {
+    background: linear-gradient(skyblue, lightblue);
     color: aliceblue;
     display: flex;
     flex-direction: column;
@@ -81,7 +77,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-evenly
 }
 
 .member-img {
@@ -89,7 +85,7 @@ body {
     border-radius: 50%;
     width: 120px;
     height: 120px;
-}
+} */
 
 
 
@@ -97,6 +93,6 @@ body {
 
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
 
-}
+} */
