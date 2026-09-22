@@ -1,0 +1,52 @@
+/* .border {
+    border: 3px solid red;
+} */
+
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    background-image: url("https://img.magnific.com/free-vector/flat-design-poker-table-background_23-2151016812.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    height: 100dvh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: clamp(3rem, calc(8dvh + 2rem), 7rem);
+    text-shadow: 0.05em 0.05em 0.02em black, -0.05em -0.05em 0.02em black;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+p {
+    font-size: clamp(1.9rem, calc(4dvh + 1rem), 3rem);
+    text-shadow: 0.05em 0.05em 0.05em black, -0.05em -0.05em 0.05em black;
+    margin: 0.3em;
+}
+
+#sum-el {
+    margin: 0 0 0.9em 0;
+}
+
+button {
+    margin: 0.1em;
+}
+
+#start-btn, #newcard-btn {
+    color: darkgreen;
+    font-size: clamp(1.5rem, calc(3.5dvh + 1rem), 2.6rem);
+    font-weight: bold;
+    border-radius: 0.3em;
+    background: goldenrod;
+    width: clamp(15rem, calc(37dvh + 3.5rem), 30rem);
+    height: 1.7em;
+}
