@@ -30,7 +30,7 @@ li:last-child {
 li::before {
     font-weight: bold;
     text-transform: capitalize;
-    content: attr(id) ": ";
+    content: attr(id)": ";
 }
 
 #price-icon{

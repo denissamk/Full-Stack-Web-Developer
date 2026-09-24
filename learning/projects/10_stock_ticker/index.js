@@ -1,4 +1,4 @@
-import {getStockData} from "./fakeStockAPI.js"
+ import {getStockData} from "./fakeStockAPI.js"
 
 setInterval(function(){
     const stockData = getStockData()
@@ -17,21 +17,24 @@ function renderStockTicker(stockData) {
     const stockDisplayTime = document.getElementById("time")
 
     const {name, sym, price, time} = stockData
+
     const numPrice = Number(price)
 
     const priceDirectionIcon =
         numPrice < prevPrice ? "▼" :
         numPrice > prevPrice ? "▲" :
-        "▶"
+        "►"
 
     stockDisplayName.innerText = name
     stockDisplaySymbol.innerText = sym
     stockDisplayPriceValue.innerText = price
+
     stockDisplayPriceIcon.textContent = priceDirectionIcon
     stockDisplayPriceIcon.className =
         priceDirectionIcon === "▲" ? "up" :
         priceDirectionIcon === "▼" ? "down" :
         "flat"
+
     stockDisplayTime.innerText = time
 
     prevPrice = numPrice
