@@ -1,7 +1,9 @@
-const age = 18;
+const user = {
+    name: 'Denis',
+    age: 19,
+    isSuccessful: true
+};
 
-const permission = age  <  18 ? "You're Under 18!" : 
-                   age === 18 ? "You're 18!" :
-                                "You're above 18!";   
+const {name, age, isSuccessful} = user;
 
-console.log(permission);
+console.log(isSuccessful);
