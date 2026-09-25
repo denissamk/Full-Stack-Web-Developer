@@ -1,3 +1,9 @@
+// document.getElementById('container').innerHTML = playlistHtml.join('')
+
+// const names = ["denis", "devon", "levan"]
+// names.forEach(names => console.log(names))
+
+
 const characters = [
     {
         title: 'Ninja',
