@@ -1,7 +1,3 @@
-* {
-    border: 3px solid red;
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -74,7 +70,7 @@ h2 {
     margin-bottom: 0;
 }
 
-p .tag-line {
+p.tag-line {
     font-family: 'Comic Neue';
     font-weight: 700;
     font-size: 14px;

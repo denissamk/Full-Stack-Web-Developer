@@ -5,8 +5,6 @@ function formatDate(date) {
     return `${yyyy}-${mm}-${dd}`;
 }
 
-console.log(formatDate(new Date()))
-
 function getDateNDaysAgo(n) {
     const now = new Date(); // current date and time
     now.setDate(now.getDate() - n); // subtract n days

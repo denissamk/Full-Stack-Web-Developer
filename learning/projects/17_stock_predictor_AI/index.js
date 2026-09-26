@@ -6,7 +6,7 @@ const tickersArr = []
 const generateReportBtn = document.querySelector('.generate-report-btn')
 
 generateReportBtn.addEventListener('click', fetchStockData)
- 
+
 document.getElementById('ticker-input-form').addEventListener('submit', (e) => {
     e.preventDefault()
     const tickerInput = document.getElementById('ticker-input')
