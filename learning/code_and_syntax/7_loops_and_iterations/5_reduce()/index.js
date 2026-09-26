@@ -21,7 +21,7 @@ import {studentsArrOne} from "./studentsArrOne.js   ";
 
 function calculateClassAvg(studentsArr) {
     const totalGrades = studentsArr.reduce((total, currentStudent) => {
-        console.log(`total: ${total}, currentStudent.grade: ${currentStudent.grade}`)
+        // console.log(`total: ${total}, currentStudent.grade: ${currentStudent.grade}`)
         return total + currentStudent.grade;
     }, 0);
     return totalGrades / studentsArrOne.length;
