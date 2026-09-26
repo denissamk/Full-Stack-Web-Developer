@@ -1,0 +1,50 @@
+* {
+    /* border: 3px solid red; */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    border: 0.3rem solid black;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: beige;
+    width: 40dvw;
+    aspect-ratio: 1.5;
+    padding: 2em;
+}
+
+img {
+    width: 30%;
+    margin: 0.5rem;
+    border: 0.2rem solid black;
+    border-radius: 1vh;
+}
+
+#upload-container {
+    font-size: clamp(1.5rem, calc(1.5vw + 1rem), 5rem);
+}
+
+#submit-imgs {
+    border: 0.2rem solid black;
+    border-radius: 2vh;
+    background: gainsboro;
+    font-size: clamp(1.5rem, calc(1.5vw + 1rem), 5rem);
+    font-weight: bold;
+    width:  50%;
+    height: 20%;
+}
+
+#submit-imgs:hover {
+    background-color: silver;
+}
