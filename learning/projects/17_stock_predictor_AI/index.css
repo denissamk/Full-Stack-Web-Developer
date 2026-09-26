@@ -1,4 +1,4 @@
-.border {
+* {
     border: 3px solid red;
 }
 
@@ -74,7 +74,7 @@ h2 {
     margin-bottom: 0;
 }
 
-p.tag-line {
+p .tag-line {
     font-family: 'Comic Neue';
     font-weight: 700;
     font-size: 14px;
