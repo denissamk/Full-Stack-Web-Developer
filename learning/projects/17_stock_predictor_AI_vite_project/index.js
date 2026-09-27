@@ -1,5 +1,7 @@
-import { dates } from '/utils/dates'
-import OpenAI from "openai"
+import { dates } from './utils/dates.js'
+import { GoogleGenAI } from '@google/genai'
+
+
 
 const tickersArr = []
 
@@ -23,6 +25,8 @@ document.getElementById('ticker-input-form').addEventListener('submit', (e) => {
     }
 })
 
+
+
 function renderTickers() {
     const tickersDiv = document.querySelector('.ticker-choice-display')
     tickersDiv.innerHTML = ''
@@ -34,6 +38,8 @@ function renderTickers() {
     })
 }
 
+
+
 const loadingArea = document.querySelector('.loading-panel')
 const apiMessage = document.getElementById('api-message')
 
@@ -42,7 +48,8 @@ async function fetchStockData() {
     loadingArea.style.display = 'flex'
     try {
         const stockData = await Promise.all(tickersArr.map(async (ticker) => {
-            const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey=${process.env.POLYGON_API_KEY}`
+            const url = `https://api.massive.com/v1/open-close/${ticker}/2026-07-20?adjusted=true&apiKey=${import.meta.env.VITE_MASSIVE_API_KEY}`
+            // `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey={import.meta.env.VITE_MASSIVE_API_KEY}`
             const response = await fetch(url)
             const data = await response.text()
             const status = await response.status
@@ -60,8 +67,47 @@ async function fetchStockData() {
     }
 }
 
+
+
 async function fetchReport(data) {
     console.log(data)
+    try {
+        const ai = new GoogleGenAI({
+            apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+            dangerouslyAllowedBrowser: true
+        })
+
+        const response = await ai.models.generateContent({
+            model: 'gemini-3.8-flash',
+            // 1. SYSTEM PROMPT (Replaces OpenAI's {role: 'system'})
+            config: {systemInstruction: `- You are a trading guru. Given data on share prices on a specific day, write a report of no more than 150 words describing the stocks performance and recommending whether to buy, hold, or sell.
+                                         - For the text output, don't use markdown file format. Still use some formatting, but just use standard document formatting for readibility purposes.`
+            },
+            // 2. USER CONTENT (Replaces OpenAI's {role: 'user'})
+            contents: data
+        })
+
+        // 3. PRINT RESPONSE (Replaces OpenAI's response.choices[0].message.content)
+        renderReport(response.text)
+    } catch (error) {
+        console.log(`Error: ${error}`)
+        loadingArea.innerText ='Unable to access API. Please refresh and try again!'
+    }
+}
+
+
+
+function renderReport(output) {
+    loadingArea.style.display = 'none'
+    const outputArea = document.querySelector('.output-panel')
+    const report = document.createElement('p')
+    outputArea.appendChild(report)
+    report.textContent = output
+    outputArea.style.display = 'flex'
+}
+
+
+
 /** 
  * Challenge:
  * 1. Use the OpenAI API to generate a report advising 
@@ -72,13 +118,3 @@ async function fetchReport(data) {
  * 
  * 🏆 Bonus points: use a try catch to handle errors.
  * **/
-}
-
-function renderReport(output) {
-    loadingArea.style.display = 'none'
-    const outputArea = document.querySelector('.output-panel')
-    const report = document.createElement('p')
-    outputArea.appendChild(report)
-    report.textContent = output
-    outputArea.style.display = 'flex'
-}
