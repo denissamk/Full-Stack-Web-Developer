@@ -1,0 +1,18 @@
+import http from 'node:http'
+
+
+const PORT = 8000
+
+
+const server = http.createServer((req, res) => {
+    console.log(req.url)
+
+    if (req.url === '/api' && req.method === 'GET') {
+        res.end('Hello from the server!!!')
+    }
+    
+    res.end('Hello from the server!!!')
+})
+
+
+server.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
