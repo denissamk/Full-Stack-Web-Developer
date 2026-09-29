@@ -6,10 +6,10 @@ import {getContentType} from './getContentType.js'
 
 export async function serveStatic(req, res, baseDir) {
     const publicDir = path.join(baseDir, 'public')
-    const pathToResource = path.join(publicDir, req.url === '/' ? 'index.html' : req.url)
-    try {const content = await fs.readFile(pathToResource)
-         const ext = path.extname(pathToResource)
-         const contentType = getContentType(ext)
+    const filePath = path.join(publicDir, req.url === '/' ? 'index.html' : req.url)
+    const ext = path.extname(filePath)
+    const contentType = getContentType(ext)
+    try {const content = await fs.readFile(filePath)
          sendResponse(res, 200, contentType, content)}
     catch(err) {
          if (err.code === 'ENOENT') {
