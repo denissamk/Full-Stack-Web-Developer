@@ -1,5 +1,6 @@
 export async function parseJSONBody(req) {
     let body = ''
+    // req by default (without specifying) is the body
     for await (const chunk of req) {
         body += chunk
     }

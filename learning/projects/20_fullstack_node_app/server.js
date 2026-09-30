@@ -2,6 +2,7 @@ import http from 'node:http'
 import { serveStatic } from './utils/serveStatic.js'
 import { handleGet } from './handlers/routeHandlers.js'
 import { handlePost } from './handlers/routeHandlers.js'
+// import { getData } from './utils/getData.js'
 
 
 const __dirname = import.meta.dirname
@@ -18,3 +19,6 @@ const server = http.createServer(async (req, res) => {
         return await serveStatic(req, res, __dirname)
     }
 }).listen(8000)
+
+// const data = await getData()
+// console.log(typeof data[5].text)
