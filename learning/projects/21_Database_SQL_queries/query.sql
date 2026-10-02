@@ -13,3 +13,5 @@
 -- WHERE brand = 'Ford' AND model = 'Escort RS2000';
 
 -- 3. DELETE
+DELETE FROM cars
+WHERE condition = 0;
