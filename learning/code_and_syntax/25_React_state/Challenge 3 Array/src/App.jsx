@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 export default function App() {
   /**
      * Challenge: Convert the code below to use an array
@@ -6,14 +8,14 @@ export default function App() {
      * 
      * Don't worry about fixing `addFavoriteThing` quite yet.
      */
-  const myFavoriteThings = []
+  const [myFavoriteThings, setMyFavoriteThings] = useState([])
   const allFavoriteThings = ["💦🌹", "😺", "💡🫖", "🔥🧤", "🟤🎁", 
   "🐴", "🍎🥧", "🚪🔔", "🛷🔔", "🥩🍝"]
   const thingsElements = myFavoriteThings.map(thing => <p key={thing}>{thing}</p>)
 
   function addFavoriteThing() {
     // We'll work on this next, nothing to do here yet.
-    
+    setMyFavoriteThings(prevFavThings => [...prevFavThings, allFavoriteThings[prevFavThings.length]])
   }
   
   return (
