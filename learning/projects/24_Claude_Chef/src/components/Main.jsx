@@ -8,28 +8,20 @@ export default function Main() {
      * ingredient to our list!
      */
 
-    const [ingredients, setIngredients] = useState(["Chicken", "Oregano", "Tomatoes"])
+    const [ingredients, setIngredients] = useState([])
 
     const ingredientsListItems = ingredients.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
     ))
 
-    function handleSubmit(event) {
-        /**
-         * Like before, don't worry about this FormData stuff yet.
-         * Just use the newIngredient below to help you finish the
-         * challenge.
-         */
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+    function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
-        console.log(newIngredient)
         setIngredients(prevIngredient => [...prevIngredient, newIngredient])
     }
 
     return (
         <main>
-            <form onSubmit={handleSubmit} className="add-ingredient-form">
+            <form action={addIngredient} className="add-ingredient-form">
                 <input
                     type="text"
                     placeholder="e.g. oregano"
