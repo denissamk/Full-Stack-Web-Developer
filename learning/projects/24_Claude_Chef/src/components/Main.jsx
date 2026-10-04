@@ -16,7 +16,7 @@ export default function Main() {
         const newIngredient = formData.get("ingredient")
         setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
-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
+
     return (
         <main>
 
