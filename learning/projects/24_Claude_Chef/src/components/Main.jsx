@@ -1,26 +1,25 @@
-import { useState } from "react"
+import React from "react"
+import ClaudeRecipe from "./ClaudeRecipe"
+import IngredientsList from "./IngredientsList"
 
 export default function Main() {
-
-    /**
-     * Challenge: Update our app so that when the user enters a
-     * new ingredient and submits the form, it adds that new
-     * ingredient to our list!
-     */
-
-    const [ingredients, setIngredients] = useState([])
-
-    const ingredientsListItems = ingredients.map(ingredient => (
-        <li key={ingredient}>{ingredient}</li>
-    ))
+    const [ingredients, setIngredients] = React.useState(
+        ["all the main spices", "pasta", "ground beef", "tomato paste"]
+    )
+    const [recipeShown, setRecipeShown] = React.useState(false)
+    
+    function toggleRecipeShown() {
+        setRecipeShown(prevShown => !prevShown)
+    }
 
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
-        setIngredients(prevIngredient => [...prevIngredient, newIngredient])
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
-
+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
     return (
         <main>
+
             <form action={addIngredient} className="add-ingredient-form">
                 <input
                     type="text"
@@ -30,9 +29,11 @@ export default function Main() {
                 />
                 <button>Add ingredient</button>
             </form>
-            <ul>
-                {ingredientsListItems}
-            </ul>
+            
+            {ingredients.length > 0 && <IngredientsList ingredients={ingredients} toggleRecipeShown={toggleRecipeShown}/>}
+            
+            {recipeShown && <ClaudeRecipe />}
+
         </main>
     )
 }
