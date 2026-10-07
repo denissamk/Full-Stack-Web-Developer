@@ -1,0 +1,8 @@
+{"timestamp":"00:00:02.025","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:06:20.906","source":"Server","level":"LOG","message":"✓ Compiled in 246ms"}
+{"timestamp":"00:06:22.024","source":"Server","level":"ERROR","message":"⨯ ReferenceError: x is not defined"}
+{"timestamp":"00:06:22.037","source":"Server","level":"ERROR","message":"⨯ ReferenceError: x is not defined"}
+{"timestamp":"00:06:24.194","source":"Server","level":"ERROR","message":"⨯ ./app/layout.jsx:3:2\nError: Expected ',', got ':'\n  1 | export default function RootLayout({\n  2 |   children,\n> 3 | }: {\n    |  ^\n  4 |   children: React.ReactNode\n  5 | }) {\n  6 |   return (\n\nParsing ecmascript source code failed\n\n"}
+{"timestamp":"00:06:24.719","source":"Browser","level":"ERROR","message":"Uncaught Error: ./app/layout.jsx:3:2\nError: Expected ',', got ':'\n  1 | export default function RootLayout({\n  2 |   children,\n> 3 | }: {\n    |  ^\n  4 |   children: React.ReactNode\n  5 | }) {\n  6 |   return (\n\nParsing ecmascript source code failed\n\n"}
+{"timestamp":"00:06:24.720","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught Error: ./app/layout.jsx:3:2\\nError: Expected ',', got ':'\\n  1 | export default function RootLayout({\\n  2 |   children,\\n> 3 | }: {\\n    |  ^\\n  4 |   children: React.ReactNode\\n  5 | }) {\\n  6 |   return (\\n\\nParsing ecmascript source code failed\\n\\n\\u001b[39m\""}
+{"timestamp":"00:06:25.913","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}

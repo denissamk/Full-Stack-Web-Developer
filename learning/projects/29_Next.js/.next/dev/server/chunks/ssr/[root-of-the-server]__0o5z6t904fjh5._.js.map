@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///home/deniskusmahendra/projects/AI%20Software%20Engineer/Full-Stack-Web-Developer/learning/projects/29_Next.js/app/page.jsx"],"sourcesContent":["export default function Page() {\n  return <h1>Hello, Next.js!</h1>\n}"],"names":["Page"],"mappings":";;;;;;AAAe,SAASA;IACtB,qBAAO,8OAAC;kBAAG;;;;;;AACb"}}]
+}
