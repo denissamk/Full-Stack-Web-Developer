@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///home/deniskusmahendra/projects/AI%20Software%20Engineer/Full-Stack-Web-Developer/learning/projects/29_Next.js/app/about/page.jsx"],"sourcesContent":["export default function AboutPage() {\n    return <h1>This is about page!</h1>\n}"],"names":["AboutPage"],"mappings":";;;;;;AAAe,SAASA;IACpB,qBAAO,8OAAC;kBAAG;;;;;;AACf"}}]
+}
